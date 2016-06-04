@@ -1,0 +1,97 @@
+\documentclass{article}
+
+\usepackage[paperwidth=18cm,paperheight=7cm,margin=2mm]{geometry}
+
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{color}
+
+\setlength{\parindent}{0pt}
+
+\renewcommand{\baselinestretch}{0.5}
+
+\definecolor{tmuxgreen}{RGB}{27, 185, 31}
+
+\begin{document}
+
+\sffamily
+
+\begin{minipage}{0.9\textwidth}
+\small
+\begin{multicols}{4}
+\begin{description}
+\item[{\sffamily \color{tmuxgreen} General}]
+\item[\texttt{C-b}]        send prefix key (\texttt{C-b})
+\item[\texttt{C-z}]        suspend tmux
+\item[\texttt{:}]          command prompt
+\item[\texttt{r}]          force redraw
+\item[{\sffamily \color{tmuxgreen} Info}]
+\item[\texttt{?}]          list key bindings
+\item[\texttt{\~}]         list prev messages
+\item[\texttt{q}]          show pane indexes
+\item[\texttt{t}]          show time
+\item[{\sffamily \color{tmuxgreen} Layout}]
+\item[\texttt{C-{[$\uparrow \downarrow \leftarrow \rightarrow$]}}] resize pane
+\item[\texttt{M-{[$\uparrow \downarrow \leftarrow \rightarrow$]}}] resize pane
+\item[\texttt{M-[1-5]}]    arrange panes
+\item[\texttt{Space}]      next pane layout
+\columnbreak
+\item[{\sffamily \color{tmuxgreen} Panes}]
+\item[\texttt{[$\uparrow \downarrow \leftarrow \rightarrow$]}] select pane
+\item[\texttt{o}]          select next pane
+\item[\texttt{;}]          select last pane
+\item[\texttt{"}]          horizontal split
+\item[\texttt{\%}]         vertical split
+\item[\texttt{!}]          break curr pane
+\item[\texttt{x}]          kill curr pane
+\item[\texttt{z}]          toggle pane zoom
+\item[\texttt{m}]          mark curr pane
+\item[\texttt{M}]          clear marked pane
+\item[\texttt{\{}]         swap curr and prev pane
+\item[\texttt{\}}]         swap curr and next pane
+\item[\texttt{C-o}]        rotate panes (fw)
+\item[\texttt{M-o}]        rotate panes (bw)
+\columnbreak
+\item[{\sffamily \color{tmuxgreen} Windows}]
+\item[\texttt{[0-9]}]      select window
+\item[\texttt{'}]          prompt window
+\item[\texttt{w}]          choose window
+\item[\texttt{n}]          select next window
+\item[\texttt{p}]          select prev window
+\item[\texttt{l}]          select last window
+\item[\texttt{f}]          find text in windows
+\item[\texttt{c}]          create new window
+\item[\texttt{.}]          move window
+\item[\texttt{,}]          rename curr window
+\item[\texttt{\&}]         kill curr window
+\item[\texttt{i}]          display window info
+\item[\texttt{M-n}]        move to next bell
+\item[\texttt{M-p}]        move to prev bell
+\columnbreak
+\item[{\sffamily \color{tmuxgreen} Sessions}]
+\item[\texttt{s}]          choose session
+\item[\texttt{)}]          switch to next session
+\item[\texttt{(}]          switch to prev session
+\item[\texttt{L}]          switch to last session
+\item[\texttt{\$}]         rename curr session
+\item[\texttt{d}]          detach curr client
+\item[\texttt{D}]          choose client to detach
+\item[{\sffamily \color{tmuxgreen} Buffers}]
+\item[\texttt{PgUp}]       scroll up
+\item[\texttt{[}]          copy mode
+\item[\texttt{]}]          paste last buffer
+\item[\texttt{-}]          delete last buffer
+\item[\texttt{\#}]         list paste buffers
+\item[\texttt{=}]          choose buffer to paste
+\end{description}
+\end{multicols}
+\end{minipage}
+\quad
+\vline
+\quad
+\begin{minipage}{0.1\textwidth}
+\LARGE
+\rotatebox{270}{\includegraphics[width=\textwidth]{tmux-logo.pdf} cheat mug}
+\end{minipage}
+
+\end{document}

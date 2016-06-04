@@ -1,0 +1,91 @@
+\documentclass{article}
+
+\usepackage[paperwidth=18cm,paperheight=7cm,margin=2mm]{geometry}
+
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{color}
+
+\setlength{\parindent}{0pt}
+
+\definecolor{pythonblue}{RGB}{90, 159, 212}
+
+\begin{document}
+
+\ttfamily
+
+\begin{minipage}{0.9\textwidth}
+\small
+\begin{multicols}{3}
+
+\begin{tabular}{l}
+\color{pythonblue} {\sffamily General}                                \\
+import math\ \ \ \ \ \ \ \ \ \ \# math.pi                             \\
+import math as m\ \ \ \ \ \# m.pi                                     \\
+from math import pi\ \ \# pi                                          \\
+from math import *\ \ \ \# pi                                         \\
+print("hello", "world")                                               \\
+class Point:                                                          \\
+def factorial(n):                                                     \\
+if x > 0: elif x < 0: else:                                           \\
+for i in range(6):                                                    \\
+while x > 0:                                                          \\
+try: except Exception as e:                                           \\
+with open('foo.txt') as f:                                            \\
+{[}i**2 for i in range(6){]}                                          \\
+map(lambda x: x**2, range(6))                                         \\
+{[}i for i in range(6) if i\%2{]}                                     \\
+filter(lambda x: x\%2, range(6))                                      \\
+\end{tabular}
+
+\begin{tabular}{ll}
+\multicolumn{2}{l}{\sffamily \color{pythonblue} List and String Methods} \\
+l.append(x)    & l.extend(L)                                          \\
+l.insert(i, x) & l.remove(x)                                          \\
+l.pop([i])     & l.clear()                                            \\
+l.index(x)     & l.count(x)                                           \\
+l.reverse()    & l.copy()                                             \\
+\multicolumn{2}{l}{l.sort(key=None, reverse=False)}                   \\
+\multicolumn{2}{l}{s.count(sub[, start[, end]])}                      \\
+\multicolumn{2}{l}{s.format(*args, **kwargs)}                         \\
+\multicolumn{2}{l}{s.find(sub[, start[, end]])}                       \\
+\multicolumn{2}{l}{s.rfind(sub[, start[, end]])}                      \\
+\multicolumn{2}{l}{s.join(iterable)}                                  \\
+\multicolumn{2}{l}{s.strip([chars])}                                  \\
+\multicolumn{2}{l}{s.replace(old, new[, count])}                      \\
+\multicolumn{2}{l}{s.split(sep=None, maxsplit=-1)}                    \\
+\multicolumn{2}{l}{s.splitlines([keepends])}                          \\
+\multicolumn{2}{l}{s.partition(sep)}                                  \\
+\end{tabular}
+
+\begin{tabular}{ll}
+\multicolumn{2}{l}{\sffamily \color{pythonblue} IO and Standard Library} \\
+f = open(file) & f.close()                                            \\
+f.read([i])    & f.readlines()                                        \\
+f.write(s)     & f.writelines(L)                                      \\
+\multicolumn{2}{l}{os.getcwd()}                                       \\
+\multicolumn{2}{l}{os.chdir('foo')}                                   \\
+\multicolumn{2}{l}{os.system('mkdir foo')}                            \\
+\multicolumn{2}{l}{shutil.copyfile('foo', 'bar')}                     \\
+\multicolumn{2}{l}{shutil.move('foo', 'bar')}                         \\
+\multicolumn{2}{l}{sys.argv}                                          \\
+\multicolumn{2}{l}{sys.stderr.write('foo')}                           \\
+\multicolumn{2}{l}{math.cos(math.pi / 4)}                             \\
+\multicolumn{2}{l}{math.log(1024, 2)}                                 \\
+\multicolumn{2}{l}{random.choice([4, 5, 6])}                          \\
+\multicolumn{2}{l}{random.sample(range(100), 10)}                     \\
+\multicolumn{2}{l}{random.random()}                                   \\
+\multicolumn{2}{l}{random.randrange(6)}                               \\
+\end{tabular}
+
+\end{multicols}
+\end{minipage}
+\quad
+\vline
+\quad
+\begin{minipage}{0.1\textwidth}
+\LARGE
+\rotatebox{270}{\includegraphics[width=\textwidth]{python-logo-generic.pdf} \textsuperscript{\sffamily cheat mug}}
+\end{minipage}
+
+\end{document}
