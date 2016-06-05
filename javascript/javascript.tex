@@ -1,0 +1,92 @@
+\documentclass{article}
+
+\usepackage[paperwidth=18cm,paperheight=7cm,margin=2mm]{geometry}
+
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{color}
+
+\setlength{\parindent}{0pt}
+
+\definecolor{javascriptyellow}{RGB}{201, 152, 2}
+
+\begin{document}
+
+\ttfamily
+
+\begin{minipage}{0.9\textwidth}
+\small
+\begin{multicols}{3}
+
+\begin{tabular}{l}
+\color{javascriptyellow} {\sffamily General}   \\
+== \ \ \ \ \ // value                          \\
+=== \ \ \ \ // value and type                  \\
+o = \{"array":["a",1,null,true]\}              \\
+num = parseInt(string)                         \\
+num.toString()                                 \\
+\color{javascriptyellow} {\sffamily Math}      \\
+Math.PI                                        \\
+Math.random() \ \ \ \ // [0,1)                 \\
+Math.min(a,b,c,...)                            \\
+Math.round(x)                                  \\
+Math.ceil(x)                                   \\
+Math.floor(x)                                  \\
+Math.sin(rad)                                  \\
+Math.pow(x,y) \ \ \ \ // x\^{}y                \\
+Math.sqrt(value)                               \\
+Math.abs(value)
+\end{tabular}
+
+\begin{tabular}{ll}
+\multicolumn{2}{l}{\sffamily \color{javascriptyellow} String} \\
+str.indexOf(what) \ \ // first                \\
+str.lastIndexOf(what)                         \\
+str.search(regexp)                            \\
+str.substring(i,to) // [i,to)                 \\
+str.substr(i,len)                             \\
+str.replace(old,new)                          \\
+str.toUpperCase()                             \\
+str.split(separator)                          \\
+\multicolumn{2}{l}{\sffamily \color{javascriptyellow} Array} \\
+array.length                           \\
+array.sort()                           \\
+array.push(what)                       \\
+delete array[0]                        \\
+array.splice(i,remove,items)           \\
+array.reverse()                        \\
+array = array1.concat(array2)          
+\end{tabular}
+
+\begin{tabular}{ll}
+\multicolumn{2}{l}{\sffamily \color{javascriptyellow} DOM} \\
+d = document; e = element;         \\
+d.getElementById(id)               \\
+d.getElementsByTagName(name)       \\
+e.innerHTML                        \\
+e.className                        \\
+e.style.property                   \\
+d.createElement(tag)               \\
+d.appendChild(element)             \\
+d.removeChild(element)             \\
+e.onclick = func                   \\
+\multicolumn{2}{l}{\sffamily \color{javascriptyellow} Time} \\
+setTimeout(func,ms) \ // once      \\
+in = setInterval(func,ms)          \\
+clearInterval(in)                  \\
+d = new Date()                     \\
+d.getHours()
+
+\end{tabular}
+
+\end{multicols}
+\end{minipage}
+\quad
+\vline
+\quad
+\begin{minipage}{0.1\textwidth}
+\LARGE
+\rotatebox{270}{\includegraphics[width=\textwidth]{javascript-logo.pdf} \textsuperscript{\sffamily cheat mug}}
+\end{minipage}
+
+\end{document}
